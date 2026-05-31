@@ -1,0 +1,98 @@
+PARTE ESCRITA — respostas_teoria.docx
+
+O que é encapsulamento?
+
+Encapsulamento é um conceito da programação orientada a objetos que protege os dados de uma classe, impedindo que sejam alterados diretamente.
+
+Encapsular dados significa guardar os atributos dentro da classe e permitir acesso apenas por métodos controlados.
+
+Diferença entre os modificadores:
+
+• public → acesso permitido de qualquer lugar do código.
+• protected → acesso permitido pela própria classe e classes filhas.
+• private → acesso permitido somente dentro da própria classe.
+
+Não é boa prática deixar tudo como public porque qualquer parte do código poderia modificar os dados sem controle.
+
+
+
+
+Para que servem os métodos get e set?
+
+Os métodos get e set servem para controlar o acesso aos atributos.
+
+Usamos getAtributo() para obter valores sem acessar diretamente.
+
+O método set também pode validar informações antes de salvar.
+
+Exemplo:
+
+setIdade($idade)
+
+Verifica se idade é maior que zero antes de salvar.
+
+
+
+
+Verdadeiro ou Falso
+
+a) Um atributo private pode ser lido diretamente fora da classe.
+
+FALSO.
+Atributos private só podem ser acessados dentro da própria classe.
+
+b) Getters e setters só fazem sentido quando os atributos são private.
+
+VERDADEIRO.
+Eles ajudam a controlar o acesso aos dados.
+
+c) Encapsulamento aumenta a segurança e manutenção do código.
+
+VERDADEIRO.
+Evita alterações indevidas.
+
+d) É possível ter getter sem setter.
+
+VERDADEIRO.
+Quando queremos apenas leitura.
+
+
+
+
+QUESTÕES 4–7 — EXPLICAÇÃO DOS ERROS
+
+
+
+
+Erro:
+echo $p->nome;
+
+Explicação:
+O atributo nome é private e não pode ser acessado diretamente. Deve ser criado um getter.
+
+
+
+
+Erro:
+Uso de $nome e $nota sem $this.
+
+Explicação:
+Dentro da classe os atributos precisam ser acessados usando $this->atributo.
+
+
+
+
+Erro:
+Mesmo mostrando erro, o setter salva idade negativa.
+
+Explicação:
+Deve impedir a atribuição usando return ou else.
+
+
+
+
+Erro:
+$c = Carro('Fusca');
+
+Explicação:
+Objetos precisam ser criados usando a palavra new.
